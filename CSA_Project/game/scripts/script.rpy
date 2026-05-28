@@ -21,7 +21,25 @@ default sleep = 0
 default key = False
 default is_dead = False
 
+default dante = False
+default cash = 0
+default yamato = False
+default potion = False
+default map_get = False
+default pizza_noti = False
+default pizza = 0
 
+default yamato_noti = False
+default game1 = False
+default pizza_quest = False
+default laby_quest  = False
+default game2 = False
+
+default pipe = False
+
+
+
+default laby = False
 
 init python:
     # 2. 定义检测函数
@@ -89,7 +107,24 @@ transform force_stretch:
     size (1920, 1080)
     truecenter
 
+transform center_bottom:
+    xalign 0.5
+    yalign 1.0
+
 define p1 = Character("Player")
+define o1 = Character("Bookstore owner", who_color = "#fddd10")
+define o2 = Character("Pharmacy owner", who_color = "#5cbb09")
+
+init python:
+    # 动态名字变量
+    dante_name = "Man in Red"
+
+# 修改 here: 使用 who_color 参数来定义名字颜色
+# color 参数会影响对话框内对话的颜色，who_color 专门负责名字颜色
+define d = Character("[dante_name]", who_color="#ff0000")
+define c = Character("Chef", who_color = "#fddd10")
+define p2 = Character("???", who_color = "#cc00ff")
+
 define flag = 0
 image box:
     "images/open the box.jpg"
@@ -257,6 +292,154 @@ image underwater:
 image pills_get:
     "images/pills_get.png"
     zoom 1.5
+
+
+
+image street:
+    "images/street.png"
+
+
+image dante_pic:
+    "images/dante.png"
+
+image owner:
+    "images/bookstore_owner.png"
+
+
+image pizza_house:
+    "images/pizza_house.png"
+
+image pizza_chef:
+    "images/pizza_chef.png"
+
+
+image dante_angry:
+    "images/dante_angry.png"
+
+image dante_smoke:
+    "images/dante_smoke.jpg"
+
+image dante_fall:
+    "images/dante_fall.png"
+
+image dante_yamato:
+    "images/dante_yamato.png"
+
+image thrust_dante:
+    "images/thrust_dante.png"
+
+image fall_gun:
+    "images/fall_gun.png"
+
+image fall_shoot:
+    "images/fall_shoot.png"
+
+image rebellion_thrust:
+    "images/rebellion_thrust.png"
+
+image rebellion_death:
+    "images/rebellion_death.png"
+
+image fog_closeup:
+    "images/fog_closeup.jpg"
+
+image black_fog:
+    "images/black_fog.png"
+
+image pipe_attack:
+    "images/pipe_attack.jpg"
+
+image pipe_shatter:
+    "images/pipe_shatter.jpg"
+
+image punch_dante:
+    "images/punch_dante.jpg"
+
+
+image entrance:
+    "images/entrance.png"
+
+image labyrinth_2:
+    "images/labyrinth_2.png"
+
+image labyrinth_3:
+    "images/labyrinth_3.png"
+
+image labyrinth_entrance_2:
+    "images/labyrinth.png"
+
+image labyrinth_smoke:
+    "images/labyrinth_smoke.png"
+
+image labyrinth_death:
+    "images/labyrinth_death.png"
+
+image killed:
+    "images/killed.png"
+
+image yamato_get:
+    "images/yamato_get.png"
+
+image yamato_get2:
+    "images/yamato_get2.png"
+
+image stationary_store:
+    "images/stationary_store.jpg"
+
+image owner:
+    "images/bookstore_owner.png"
+
+image hardware_store:
+    "images/hardware_store.jpg"
+
+image hardware_pipe:
+    "images/hardware_pipe.jpg"
+
+
+image altar:
+    "images/altar.png"
+
+image altar_yamato:
+    "images/altar_yamato.png"
+
+image altar_yamato2:
+    "images/altar_yamato2.png"
+
+image altar_yamato3:
+    "images/altar_yamato3.png"
+
+image breakdown:
+    "images/breakdown.png"
+
+image breakdown2:
+    "images/breakdown2.png"
+
+image breakdown3:
+    "images/breakdown3.png"
+
+image breakdown_fall:
+    "images/breakdown_fall.png"
+
+
+
+image fake_ending2:
+    "images/fake_ending2.jpg"
+
+
+
+image altar_dante1:
+    "images/altar_dante1.jpg"
+
+image altar_dante2:
+    "images/altar_dante2.jpg"
+
+
+image pharmacy_after:
+    "images/pharmacy_after.png"
+
+image pharmacy_potion:
+    "images/pharmacy_potion.png"
+
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
