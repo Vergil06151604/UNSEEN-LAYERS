@@ -95,7 +95,8 @@ label pizza_decision:
 
 
 label dante_pizza:
-    scene pizza_chef with dissolve
+    scene pizza_chef at force_stretch 
+    with dissolve
     o1 "Dante! Haven\'t seen you in a while!"
     show dante_pic at right
     with dissolve
